@@ -1,0 +1,13 @@
+DITS CRM Billing APK Build - No Android Studio Needed
+
+1) Open github.com and create a new private repository.
+2) Upload all files/folders from this ZIP to that repository.
+3) Open Actions tab.
+4) Select "Build DITS CRM Billing APK".
+5) Click "Run workflow".
+6) After build completes, download artifact: DITS-CRM-Billing-APK.
+7) Inside it you will get app-debug.apk. Install it on Android.
+
+App Name: DITS CRM Billing
+URL: https://billing.dits.com.pk
+Package: pk.com.dits.crmbilling
