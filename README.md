@@ -1,26 +1,37 @@
-# DITS CRM Billing Mobile Apps
+# DITS CRM Billing Android Apps
 
-This repository builds two Android WebView APK files from GitHub Actions:
+This is a complete GitHub-ready Android WebView project for two APKs:
 
-- **Admin App** → opens `https://billing.dits.com.pk/admin/`
-- **Customer App** → opens `https://billing.dits.com.pk/client/`
+- **Admin App** opens `https://billing.dits.com.pk/admin/`
+- **Customer App** opens `https://billing.dits.com.pk/client/`
 
-## Build APK on GitHub
+## What is included
 
-1. Upload all files and folders from this ZIP into your GitHub repository.
-2. Open the **Actions** tab.
-3. Click **Build Admin and Customer APK**.
-4. Click **Run workflow**.
-5. After build completes, open the workflow result.
-6. Download artifact **DITS-CRM-Billing-APK-Files**.
-7. Inside it you will get:
-   - `Admin-App.apk`
-   - `Customer-App.apk`
+- Two separate Android app modules: `adminApp` and `customerApp`
+- Proper WebView configuration
+- JavaScript, DOM storage, cookies, mixed content support
+- File upload support from CRM forms
+- Download support for PDFs, invoices, documents, reports
+- Back button support inside WebView
+- Internet/offline message
+- Splash/progress loading bar
+- Separate app labels/icons
+- Android permissions
+- GitHub Actions workflow at `.github/workflows/build-apk.yml`
+- APK artifact output names:
+  - `Admin-App.apk`
+  - `Customer-App.apk`
 
-## Change URL later
+## Build on GitHub
 
-Admin URL file:
-`adminApp/src/main/java/com/dits/crmbilling/admin/AdminActivity.java`
+1. Extract this ZIP.
+2. Upload all files/folders to GitHub repository root.
+3. Open **Actions** tab.
+4. Run **Build Admin and Customer APK**.
+5. Download artifact **DITS-CRM-Billing-APK-Files**.
 
-Customer URL file:
-`customerApp/src/main/java/com/dits/crmbilling/customer/CustomerActivity.java`
+## Important note about full CRM inside APK
+
+Your CRM/Billing Software is PHP/MySQL based, so the complete working system cannot run fully offline inside a 3MB-10MB Android APK. This app runs your full live CRM inside Android using WebView. Admin and Customer panels will work exactly as your hosted web software works.
+
+For real push notifications, Firebase keys are required. See `docs/FIREBASE_PUSH_NOTIFICATION_SETUP.md`.

@@ -1,0 +1,19 @@
+GitHub par upload ka tareeqa:
+
+1. ZIP ko Extract karein.
+2. Repository ki purani files delete karein.
+3. Extract folder ke andar se ye sab upload karein:
+   .github
+   adminApp
+   customerApp
+   docs
+   build.gradle
+   settings.gradle
+   gradle.properties
+   README.md
+   UPLOAD_TO_GITHUB_STEPS_URDU.txt
+4. Commit changes karein.
+5. Actions tab kholein.
+6. Build Admin and Customer APK run karein.
+7. Success ke baad artifact download karein.
+8. ZIP extract karein. Andar Admin-App.apk aur Customer-App.apk milen gi.
